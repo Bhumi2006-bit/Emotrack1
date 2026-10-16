@@ -1,0 +1,96 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Caches and test outputs
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# Environments and Secrets
+venv/
+env/
+ENV/
+.venv/
+.env
+.env.local
+.env.*.local
+
+# Databases & User Data (protect user privacy & prevent DB lock contention)
+*.db
+*.sqlite
+*.sqlite3
+backend/emotrack.db
+
+# Node.js and Frontend Build Outputs
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.vite/
+
+# Large Model Weights (>50MB - GitHub hard limit is 100MB)
+# Fine-tuned PyTorch checkpoints are reproducible via backend/research/ scripts.
+# Production inference uses Hugging Face automatic download/cache fallback or local lightweight models.
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.h5
+*.onnx
+
+# Explicitly ensure lightweight production models (<1MB) are preserved and tracked
+!backend/evaluation/data/stress_model.pkl
+!backend/evaluation/data/stress_tfidf_vectorizer.pkl
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary Scratch & Diagnostic Files
+*.tmp
+*.temp
+scratch_*.txt
+diagnostic_*.txt
+diagnostic_*.csv
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Local databases and logs
+*.db
+*.sqlite
+*.sqlite3
+*.log
+
+# Frontend dependencies and build output
+frontend/node_modules/
+frontend/dist/
+
+# Large model weights: store separately for deployment
+*.pt
+*.pth
+*.bin
+*.safetensors
+
+# Local caches
+.cache/

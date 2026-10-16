@@ -1,0 +1,76 @@
+{
+  "evaluation_timestamp": "2026-09-25 09:17:32",
+  "emotion_model": {
+    "model": "j-hartmann/emotion-english-distilroberta-base",
+    "dataset": "GoEmotions (80/20 stratified split)",
+    "test_samples": 8664,
+    "accuracy": 0.4277,
+    "macro_precision": 0.3446,
+    "weighted_precision": 0.5852,
+    "macro_recall": 0.538,
+    "weighted_recall": 0.4277,
+    "macro_f1": 0.3459,
+    "weighted_f1": 0.4582,
+    "per_class": {
+      "Anger": {
+        "precision": 0.3955,
+        "recall": 0.3383,
+        "f1": 0.3647,
+        "support": 1147
+      },
+      "Disgust": {
+        "precision": 0.1556,
+        "recall": 0.4224,
+        "f1": 0.2274,
+        "support": 116
+      },
+      "Fear": {
+        "precision": 0.2368,
+        "recall": 0.7642,
+        "f1": 0.3615,
+        "support": 123
+      },
+      "Joy": {
+        "precision": 0.8063,
+        "recall": 0.3477,
+        "f1": 0.4859,
+        "support": 3388
+      },
+      "Neutral": {
+        "precision": 0.5223,
+        "recall": 0.491,
+        "f1": 0.5062,
+        "support": 3346
+      },
+      "Sadness": {
+        "precision": 0.1872,
+        "recall": 0.5888,
+        "f1": 0.2841,
+        "support": 394
+      },
+      "Surprise": {
+        "precision": 0.1084,
+        "recall": 0.8133,
+        "f1": 0.1914,
+        "support": 150
+      }
+    },
+    "mean_confidence": 0.6999,
+    "inference_rate_samples_per_sec": 87.8
+  },
+  "stress_baseline": {
+    "model": "TF-IDF + Logistic Regression (Dreaddit Baseline)",
+    "dataset": "Dreaddit Test Split",
+    "samples": 715,
+    "accuracy": 0.7329,
+    "precision": 0.8225,
+    "recall": 0.6152,
+    "f1": 0.7039
+  },
+  "system_components": {
+    "wellness": "Deterministic scoring formula (non-diagnostic)",
+    "trend": "Statistical longitudinal slope (threshold >=3 entries)",
+    "recommendations": "Tag-based rule engine & LangGraph agent",
+    "explainability": "Perturbation-based occlusion sensitivity attribution"
+  }
+}
